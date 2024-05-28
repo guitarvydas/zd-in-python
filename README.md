@@ -22,6 +22,10 @@ Ports "a", "x", "y" are fictitious, but, meant to show mapping of output port na
 # points of interest
 1. connections are owned by a Container, not by the components themselves
    - components react to a single message at a time and produce outputs (plural) to an output queue, parent Container routes the messages
-2. message routing requires mapping sender's message port to receiver's receive port
+2. message routing requires mapping sender's output port to receiver's input port
 3. message routing allows fan-out, hence, in general (before optimization) messages must be copied
    - fan-out is vital to abstraction which is used to simplify DX by enabling layering
+
+# miscellaneous
+- use draw.io (https://app.diagrams.net) to edit and read `zd.drawio`
+- in this example, I manually wrote the code, but, elsewhere I show how to compile `.drawio` files into running Python (wip: https://github.com/guitarvydas/0D)
